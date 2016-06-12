@@ -1,9 +1,12 @@
 import Promise from 'bluebird';
-import File from 'vinyl';
 import streamToString from 'stream-to-string';
 
 module.exports = (file, enc) => {
-  if (!(file instanceof File)) {
+  if (
+    !file ||
+    typeof file.isBuffer !== 'function' ||
+    typeof file.isStream !== 'function'
+  ) {
     return Promise.reject(new TypeError('First argument must be a Vinyl file'));
   }
 
