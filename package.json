@@ -1,6 +1,6 @@
 {
   "name": "vinyl-contents-tostring",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Convert vinyl file content to string",
   "main": "lib/index.js",
   "scripts": {
