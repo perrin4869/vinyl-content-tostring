@@ -18,6 +18,17 @@ describe('vinyl-contents-tostring', () => {
 
       return expect(vinylToString(vinylFile)).become('test stream content');
     });
+
+    it('should correctly use encoding', () => {
+      // create the fake file
+      const vinylFile = new File({
+        path: 'bar',
+        contents: new PassThrough(),
+      });
+      vinylFile.contents.end('this is a tést');
+
+      return expect(vinylToString(vinylFile, 'ascii')).to.become('this is a tC)st');
+    });
   });
 
   describe('in buffer mode', () => {
