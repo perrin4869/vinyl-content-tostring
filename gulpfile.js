@@ -3,14 +3,13 @@ const util = require('gulp-util');
 const babel = require('gulp-babel');
 const mocha = require('gulp-mocha');
 const eslint = require('gulp-eslint');
-const compiler = require('babel-core/register');
 
 const src = 'src/index.js';
 
 gulp.task('lint', () =>
   gulp.src(src)
   .pipe(eslint())
-  .pipe(eslint.format())
+  .pipe(eslint.format()),
 );
 
 gulp.task('build', ['lint'], () => (
@@ -21,11 +20,7 @@ gulp.task('build', ['lint'], () => (
 
 gulp.task('test', ['lint'], () => (
   gulp.src('test')
-  .pipe(mocha({
-    compilers: { // TODO: remove once mocha supports mocha.opts from the API
-      js: compiler,
-    },
-  }))
+  .pipe(mocha())
   .on('error', util.log)
 ));
 
