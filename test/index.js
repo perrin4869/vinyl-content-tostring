@@ -61,7 +61,7 @@ describe('vinyl-contents-tostring', () => {
     });
 
     it('should throw a type error', () =>
-      expect(vinylToString({})).to.be.rejectedWith(TypeError, /First argument must be a Vinyl file/)
+      expect(vinylToString({})).to.be.rejectedWith(TypeError, /First argument must be a Vinyl file/),
     );
   });
 });
