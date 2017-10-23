@@ -1,6 +1,6 @@
 const env = process.env.NODE_ENV || 'production';
 
 module.exports = {
-  presets: ['es2015'],
+  presets: [['env', { targets: { node: 4 } }]],
   plugins: [...(env === 'test' ? ['istanbul'] : [])],
 };
