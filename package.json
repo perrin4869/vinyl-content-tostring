@@ -42,9 +42,9 @@
     "chai-as-promised": "^7.0.0",
     "coveralls": "^2.13.1",
     "env-test": "^1.0.0",
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb-base": "^11.2.0",
-    "eslint-plugin-import": "^2.3.0",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.7.0",
     "mocha": "^4.0.1",
     "nyc": "^11.0.2",
     "vinyl": "^1.1.1"

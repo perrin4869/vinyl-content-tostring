@@ -36,7 +36,7 @@ describe('vinyl-contents-tostring', () => {
       // create the fake file
       const vinylFile = new File({
         path: 'bar',
-        contents: new Buffer('test buffer content'),
+        contents: Buffer.from('test buffer content'),
       });
 
       return expect(vinylToString(vinylFile)).become('test buffer content');
@@ -46,7 +46,7 @@ describe('vinyl-contents-tostring', () => {
       // create the fake file
       const vinylFile = new File({
         path: 'bar',
-        contents: new Buffer('this is a tést'),
+        contents: Buffer.from('this is a tést'),
       });
 
       return expect(vinylToString(vinylFile, 'ascii')).to.become('this is a tC)st');
@@ -60,8 +60,8 @@ describe('vinyl-contents-tostring', () => {
       return expect(vinylToString(vinylFile)).become('');
     });
 
-    it('should throw a type error', () =>
-      expect(vinylToString({})).to.be.rejectedWith(TypeError, /First argument must be a Vinyl file/),
-    );
+    it('should throw a type error', () => (
+      expect(vinylToString({})).to.be.rejectedWith(TypeError, /First argument must be a Vinyl file/)
+    ));
   });
 });
