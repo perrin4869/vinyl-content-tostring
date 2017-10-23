@@ -1,9 +1,3 @@
 {
-  "presets": ["es2015"],
-  "env": {
-    "test": {
-      "plugins": ["istanbul"],
-      "ignore": "gulpfile.js"
-    }
-  }
+  "presets": ["./.babelrc.js"]
 }
