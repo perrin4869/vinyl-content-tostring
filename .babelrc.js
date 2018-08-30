@@ -3,6 +3,6 @@ const env = process.env.NODE_ENV || 'production';
 const plugins = env === 'test' ? ['istanbul'] : [];
 
 module.exports = {
-  presets: [['env', { targets: { node: 4 } }]],
+  presets: [['@babel/env', { targets: { node: 6 } }]],
   plugins,
 };
