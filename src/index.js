@@ -1,4 +1,3 @@
-import Promise from 'bluebird';
 import streamToString from 'stream-to-string';
 
 module.exports = (file, enc) => {

@@ -30,7 +30,6 @@
   },
   "homepage": "https://github.com/perrin4869/vinyl-contents-tostring#readme",
   "dependencies": {
-    "bluebird": "^3.5.3",
     "stream-to-string": "^1.2.0"
   },
   "devDependencies": {
