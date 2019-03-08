@@ -20,16 +20,16 @@ $ npm install vinyl-contents-tostring
 ```js
 const vfs = require('vinyl-fs');
 const map = require('map-stream');
+const asCallback = require('ascallback');
 const vinylToString = require('vinyl-contents-tostring');
 
 vfs.src(['./package.json'])
-.pipe(map((file, cb) => (
-  vinylToString(file)
-  .then(contents => {
-    console.log(contents);
-  })
-  .asCallback(cb)
-)));
+  .pipe(map(
+    (file, cb) => asCallback(
+      vinylToString(file).then(contents => console.log(contents)),
+      cb,
+    ),
+  ));
 ```
 
 ## API
