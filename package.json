@@ -2,15 +2,14 @@
   "name": "vinyl-contents-tostring",
   "version": "2.0.1",
   "description": "Convert vinyl file content to string",
-  "main": "lib/index.js",
+  "main": "src/index.js",
   "scripts": {
     "lint": "eslint 'src/*.js' 'test/*.js'",
     "pretest": "npm run lint",
     "test": "mocha",
-    "build": "babel src -d lib",
     "cover": "nyc npm test",
     "coveralls": "npm run cover && nyc report --reporter=text-lcov | coveralls",
-    "prepare": "npm run test && npm run build"
+    "prepare": "npm run test"
   },
   "repository": {
     "type": "git",
@@ -30,23 +29,22 @@
   },
   "homepage": "https://github.com/perrin4869/vinyl-contents-tostring#readme",
   "dependencies": {
-    "stream-to-string": "^1.2.0"
+    "stream-to-string": "^1.2.0",
+    "vinyl": "^2.2.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.3.4",
-    "@babel/preset-env": "^7.3.4",
-    "@babel/register": "^7.0.0",
-    "babel-plugin-istanbul": "^5.1.1",
+    "@babel/core": "^7.9.0",
+    "@babel/register": "^7.9.0",
+    "@istanbuljs/nyc-config-babel": "^3.0.0",
+    "babel-plugin-istanbul": "^6.0.0",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
-    "coveralls": "^3.0.3",
+    "coveralls": "^3.1.0",
     "env-test": "^1.0.0",
-    "eslint": "^5.15.1",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.16.0",
-    "mocha": "^6.0.2",
-    "nyc": "^13.3.0",
-    "vinyl": "^2.2.0"
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "mocha": "^7.1.2",
+    "nyc": "^15.0.1"
   }
 }

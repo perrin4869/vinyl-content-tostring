@@ -1,10 +1,8 @@
-import File from 'vinyl';
-import { PassThrough } from 'stream';
-import chai, { expect } from 'chai';
+const File = require('vinyl');
+const { PassThrough } = require('stream');
+const { expect } = require('chai');
 
-import vinylToString from '../src';
-
-chai.use(require('chai-as-promised'));
+const vinylToString = require('..');
 
 describe('vinyl-contents-tostring', () => {
   describe('in streaming mode', () => {
