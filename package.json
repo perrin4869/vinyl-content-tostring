@@ -15,13 +15,8 @@
     "type": "git",
     "url": "git+https://github.com/dotcore64/vinyl-contents-tostring.git"
   },
-  "files": [
-    "lib"
-  ],
-  "keywords": [
-    "gulp",
-    "vinyl"
-  ],
+  "files": ["src"],
+  "keywords": ["gulp", "vinyl"],
   "author": "Julian Grinblat <julian@dotcore.co.il>",
   "license": "SEE LICENSE IN LICENSE.md",
   "bugs": {
